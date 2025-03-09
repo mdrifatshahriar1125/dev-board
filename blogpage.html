@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev-Board</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
-    Dev-Board blog page
+
+<body class=" bg-[#F4F7FF]">
+    <header class="container mx-auto my-5 bg-white ">
+        <nav class="flex justify-between shadow-md py-4 px-3 rounded-lg">
+            <!-- project name / left side portion of nav-->
+            <div class="flex items-center ">
+                <img class="h-11" src="assets/logo.png" alt="">
+                <h1 class="text-2xl">Dev<span class="font-bold">Board</span> </h1>
+            </div>
+            <!-- right side portion of nav -->
+            <div class="flex items-center">
+
+                <button><a class="bg-blue-600 text-white text-xl font-semibold px-3 py-2 rounded-md"
+                        href="index.html">Back to Desk</a></button>
+            </div>
+        </nav>
+    </header>
+    <main class="container mx-auto flex flex-col gap-5 mb-7">
+        <!-- question 1 -->
+        <div class="bg-white py-3 px-3 rounded-md">
+            <h1 class="text-xl font-semibold pb-4 border-b-2 ">Question-1: What are the different ways to select an
+                element in the DOM?
+
+            </h1>
+            <p class=" pt-4 from-neutral-200 font-normal">JavaScript provides several ways to select DOM elements.
+                "getElementById" selects an element by ID, while
+                getElementsByClassName and "getElementsByTagName" return collections based on class or tag name.
+                "querySelector" selects the first matching element using a CSS selector, and "querySelectorAll" returns
+                all matching elements as a NodeList.</p>
+        </div>
+        <!-- question 2 -->
+        <div class="bg-white py-3 px-3 rounded-md">
+            <h1 class="text-xl font-semibold pb-4 border-b-2 ">Question-2: What is the difference between innerHTML,
+                innerText, and textContent ?
+
+            </h1>
+            <p class=" pt-4 from-neutral-200 font-normal">"innerHTML", "innerText", and "textContent" are used to get or
+                set content in a DOM element, but they behave differently. "innerHTML" returns or sets the HTML content,
+                including any tags, which allows parsing of HTML but can pose security risks if handling user input.
+                "innerText" retrieves or sets only the visible text, ignoring hidden elements and extra spaces, and it
+                also triggers reflow, which may impact performance. "textContent" returns or sets all text content,
+                including hidden elements, while preserving spacing, making it faster and more secure than "innerText"
+                since it does not parse HTML.</p>
+        </div>
+        <!-- question 3 -->
+        <div class="bg-white py-3 px-3 rounded-md">
+            <h1 class="text-xl font-semibold pb-4 border-b-2 ">Question-3: What is event delegation in the DOM?
+
+
+            </h1>
+            <p class=" pt-4 from-neutral-200 font-normal">Event delegation is a technique where a parent element handles
+                events for its child elements using event bubbling. Instead of adding event listeners to each child, a
+                single listener on the parent detects events from dynamically added elements, improving performance.</p>
+        </div>
+        <!-- question 4 -->
+        <div class="bg-white py-3 px-3 rounded-md">
+            <h1 class="text-xl font-semibold pb-4 border-b-2 ">Question-4: What is event bubbling in the DOM?
+
+
+            </h1>
+            <p class=" pt-4 from-neutral-200 font-normal">Event bubbling is a DOM mechanism where an event starts from
+                the target element and propagates **upward** through its ancestors. For example, if a button inside a
+                div is clicked, the event first triggers on the button, then bubbles up to the div, and further up to
+                the document. This allows parent elements to handle events from their children, enabling techniques like
+                event delegation.</p>
+        </div>
+        <!-- question 5 -->
+        <div class="bg-white py-3 px-3 rounded-md">
+            <h1 class="text-xl font-semibold pb-4 border-b-2 ">Question-5: How do you create, add, and remove elements
+                using JavaScript?
+
+
+
+            </h1>
+            <p class=" pt-4 from-neutral-200 font-normal">In JavaScript, creating, adding, and removing elements
+                dynamically is an essential part of working with the DOM. For instance, we can create a new element
+                using document.createElement(), like creating a new
+            <div> element: let newDiv = document.createElement('div');. After that, we can add content to the element
+                with newDiv.innerHTML = 'Hello, World!'; and apply styles or classes using
+                newDiv.classList.add('my-class');. To add the newly created element to the webpage, we can select a
+                parent element and append the new element using appendChild(), such as
+                parentElement.appendChild(newDiv);. Removing elements is also simple: we can select an element and use
+                remove() to delete it directly, like elementToRemove.remove();</p>
+            </div>
+
+    </main>
 </body>
+
 </html>
